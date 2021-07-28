@@ -31,6 +31,11 @@ function NewPlantForm({ addPlant }) {
       body: JSON.stringify(newPlant)
     }).then(res => res.json())
     .then(plantObj => addPlant(plantObj))
+    setPlantForm({
+      name: '',
+      image: '',
+      price: '',}
+    )
   }
 
   return (

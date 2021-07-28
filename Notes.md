@@ -17,6 +17,12 @@ App
 
 ## Deliverables
 [X] On launch, display all plants
-[] Add new plant via the form
+[X] Add new plant via the form
 [X] Mark plant as "sold out"
 [X] search plants by name and see filtered list
+
+## Advanced Deliverables
+[] Update price of a plant and see updated price after refresh(persistence)
+[X] Delete plant (and persisted)
+        - add trash button
+        - onClick => DELET request + removePlant in PlantPage

@@ -11,10 +11,22 @@ function PlantPage() {
     fetch(`http://localhost:6001/plants`)
     .then(res => res.json())
     .then(data => setPlants(data))
-  }, [])
+  }, [] )
 
   function addPlant(newPlant){
     setPlants([...plants, newPlant])
+  }
+  
+  function removePlant(id){
+    const updatedPlants = plants.filter(plant => plant.id !== id)
+    setPlants(updatedPlants)
+  }
+
+  function editPlant(id, updatedPlant){
+    const editedPlants = plants.map(plant => {
+      if(plant.id !== id) {return plant}
+      else {return updatedPlant}})
+    setPlants(editedPlants);
   }
 
   const displayPlants = search ? plants.filter(plant => plant.name.toLowerCase().includes(search.toLowerCase())) : plants;
@@ -23,7 +35,7 @@ function PlantPage() {
     <main>
       <NewPlantForm addPlant={addPlant}/>
       <Search search={search} setSearch={setSearch}/>
-      <PlantList plants={displayPlants}/>
+      <PlantList plants={displayPlants} removePlant={removePlant} editPlant={editPlant}/>
     </main>
   );
 }

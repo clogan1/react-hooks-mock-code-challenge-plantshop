@@ -21,6 +21,7 @@ button {
   font-family: inherit;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 button.primary {
@@ -134,4 +135,24 @@ input:focus {
   .card {
     width: calc(20% - 2rem);
   }
+}
+
+
+.trash-btn, .edit-btn, .greencheck-btn {
+  background-color: #f8f8ff;
+  margin-left: 20px;
+  font-size: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+  padding-left: 10px;
+  filter: grayscale(100%)
+}
+
+.trash-btn:hover, .edit-btn:hover, .greencheck-btn:hover {
+  background-color:#dadae0;
+}
+
+.price-edit{
+  width: 100px;
 }
