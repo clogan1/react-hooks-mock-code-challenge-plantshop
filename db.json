@@ -41,6 +41,18 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "tester plant",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_be189e2c-40b1-41f2-9fa8-4c99dba909e0?wid=488&hei=488&fmt=pjpeg",
+      "price": 24.99,
+      "id": 8
+    },
+    {
+      "name": "Test2",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_be189e2c-40b1-41f2-9fa8-4c99dba909e0?wid=488&hei=488&fmt=pjpeg",
+      "price": 18.99,
+      "id": 9
     }
   ]
 }
