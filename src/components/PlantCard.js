@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function PlantCard({ plant, removePlant, editPlant }) {
   const [isStocked, setIsStocked] = useState(true)
-  const [inEditMode, setInEditMode] = useState(false)
+  const [inEditMode, setInEditMode] = useState(false) 
   const [formPrice, setFormPrice] = useState(plant.price)
 
   function handleTrashClick(){
@@ -32,7 +32,7 @@ function PlantCard({ plant, removePlant, editPlant }) {
     )
   }
 
-  function priceRender(){
+  function priceRenderMode(){
     return (
       <p>Price: ${plant.price} <button className="edit-btn" onClick={() => setInEditMode(true)}>✏️</button> </p> 
     )
@@ -42,12 +42,12 @@ function PlantCard({ plant, removePlant, editPlant }) {
     <li className="card">
       <img src={plant.image} alt={"plant name"} />
       <h4>{plant.name}</h4>
-      {inEditMode ? editMode() : priceRender()}
+      {inEditMode ? editMode() : priceRenderMode()}
       <br></br>
       {isStocked ? (
         <button className="primary" onClick={() => setIsStocked(false)}>In Stock</button>
       ) : (
-        <button>Out of Stock</button>
+        <button onClick={() => setIsStocked(true)}>Out of Stock</button>
       )}
       <button className="trash-btn" onClick={handleTrashClick}> 🗑 </button>
     </li>

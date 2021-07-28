@@ -22,7 +22,7 @@ App
 [X] search plants by name and see filtered list
 
 ## Advanced Deliverables
-[] Update price of a plant and see updated price after refresh(persistence)
+[X] Update price of a plant and see updated price after refresh(persistence)
 [X] Delete plant (and persisted)
         - add trash button
         - onClick => DELET request + removePlant in PlantPage
